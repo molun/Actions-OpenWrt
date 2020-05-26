@@ -13,11 +13,6 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-<<<<<<< HEAD
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #git clone https://github.com/vernesong/luci-app-clash package/molun/luci-app-clash
 git clone https://github.com/fw876/helloworld package/molun/uci-app-ssr-plus
-=======
-git clone https://github.com/fw876/helloworld package/molun/luci-app-ssr-plus
-git clone https://github.com/vernesong/luci-app-clash package/molun/luci-app-clash
->>>>>>> 4d62d15ec4299a72f7fb12d6e650f9587955dd83
