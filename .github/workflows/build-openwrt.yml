@@ -16,10 +16,12 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
+        required: true
         default: 'false'
 #  schedule:
 #    - cron: 0 8 * * 5
+  watch:
+    types: started
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
@@ -38,6 +40,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
