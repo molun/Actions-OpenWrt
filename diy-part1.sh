@@ -1,26 +1,28 @@
 #!/bin/bash
-#=============================================================
+#
+# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
+#
+# This is free software, licensed under the MIT License.
+# See /LICENSE for more information.
+#
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=============================================================
+#
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
+echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #sed -i '$a src-git xiaorouji https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
+#sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
 #sed -i '$a src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom' feeds.conf.default
 #sed -i '$a src-git opentopd  https://github.com/sirpdboy/luci-theme-opentopd' feeds.conf.default
-#sed -i '$a src-git fw876 https://github.com/fw876/helloworld' feeds.conf.default
-
 
 # Define My Package
 #git clone https://github.com/rufengsuixing/luci-app-adguardhome package/molun/luci-app-adguardhome
@@ -33,5 +35,4 @@ sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.d
 #git clone https://github.com/jerrykuku/luci-app-vssr package/molun/luci-app-vssr
 #git clone https://github.com/garypang13/luci-app-bypass package/molun/luci-app-bypass
 #git clone https://github.com/fw876/helloworld package/molun/luci-app-ssr-plus
-#git clone https://github.com/tty228/luci-app-serverchan package/molun/luci-app-serverchan 
-
+#git clone https://github.com/tty228/luci-app-serverchan package/molun/luci-app-serverchan
